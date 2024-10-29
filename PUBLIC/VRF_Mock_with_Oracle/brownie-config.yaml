@@ -1,0 +1,43 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@3.4.0
+  - smartcontractkit/chainlink-brownie-contracts@0.6.1
+reports:
+  exclude_contracts:
+    - LinkToken
+    - VRFCoordinatorMock
+    - ERC721
+    - EnumerableMap
+    - Address
+    - EnumerableSet
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.4.0"
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.6.1"
+dotenv: .env
+settings:
+  revert_msg_gas_cost: True
+wallets:
+  from_key: ${PRIVATE_KEY}
+networks:
+  sepolia:
+    link_    : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on sepolia"
+    mock2_   : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on sepolia"
+    mock3_   : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on sepolia"
+    wrapper_ : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on sepolia"
+    oracle_  : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on sepolia"
+
+  development:
+    link_    : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on development"
+    mock2_   : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on development"
+    mock3_   : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on development"
+    wrapper_ : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on development"
+    oracle_  : " [WILL UPDATE AUTOMATICALLY WHEN DEPLOY.PY is ran] on development"
+    link_coordinator  : "0x51cf75287148cba21FBAAF69FBE3D60546e7d16e"
+
+
+
+
+
+
+
