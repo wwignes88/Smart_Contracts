@@ -1,0 +1,78 @@
+compiler:
+  solc:
+    version: 0.7.6
+    remappings:
+      - '@uniswap=node_modules\@uniswap'
+      - '@openzeppelin=node_modules\@openzeppelin'
+      - '@v3MOCKS=contracts'
+      - '@v3CoreMOCKS=contracts\v3-core'
+      - '@v3PeripheryMOCKS=contracts\v3-periphery'
+      - '@v3Staker=contracts\Staker'
+dotenv: .env
+networks:
+
+  polygon-amoy:
+
+    #---- MOCK ERC20s
+    # from: https://polygonscan.com/tokens
+    weth : "0x6863b3e4f6078105A02421FEFAa756E6fBb418cA"
+    sand : "0x84362d16D098c509e77029E0D4A6175B1A483b3e"
+    link : "0xf4447503eb3a9E9574627B01D38956C140fd42dC"
+
+    #------ UNISWAP MOCKS
+    # uniswap libraries
+    PoolHashGenerator : "0xcF98624febd1Bf75C12772a396B33715F4D76EB5"
+    PoolIIHashGenerator : "0xFC9F55479dAe01271077f28355f75df4746085A9"
+    MPoolAddress : "0x01D8A896Bde1448850c8933C5d6b956DAc1CC2B4"
+    MTransferHelper : "0x40963fDCdfB38423c2907280BC7c1c09BEb35Fd5"
+    MCallbackValidation : "0x15D6086A11372d6BD8BABcE4a08C91C085d92B44"
+
+    # uniswap mocks
+    MFactory : "0x72d7F6F943C40C1E2dB3E69A7C55eE4Ee2a53196"
+    MFactoryII : "0x810de0d0f47963b172FA9544e54866453A3e4f0f"
+    MNonfungiblePositionManager : "0x36F624f9184d49547FA33729605E6667364C1B79"
+    MNonfungiblePositionManagerII : "0x8103223DA6669CB654803B4F318C7DD242F0677A"
+    MSwapRouter : "0xF581120dAfDc45235C15D444Ad667020134d52d7"
+    # my mocks/ test contracts
+    MliquidityMiner : "0xFF3586BB3323ebBc933EFF1f6766E2B067C95be4"
+    MLiquidityStaker : "0x1D7DBf22DF6Ea5B7dBD037D120E685CDf5dDDBF2"
+    MSwapper : "0x304f55c9478408888342Cc545A2461D2Fd4B3B98"
+
+    #---------- TESTING
+    MyMath : "0x93b75f9e1c9A53751b10a0cf0d144C55CdeBbfCa"
+
+  polygon-cardona:
+
+    #---- MOCK ERC20s
+    # from: https://polygonscan.com/tokens
+    weth : "0x44578CbA77E0372587486DA93Df337Cba0bbD4d0"
+    sand : "0xaa8138d6295d127085B60021718e20Fac918C65d"
+    link : "0x58a49312832216E5bB755455453F699375a326F3"
+
+    #------ UNISWAP MOCKS
+    # uniswap libraries
+    PoolHashGenerator : "0x0Bc519bC275FDFc7Ea11c0E121834B55D9a881e3"
+    PoolIIHashGenerator : "0xF1348F32129ab80de8851916396c04efb284D429"
+    MPoolAddress : "0xc9eF9D82BB66bD759cc0AF4E295d2e0Cd8976C60"
+    MTransferHelper : "0xEAF8044245e99c0b11A6ac4dE7251f113180bA6F"
+    MCallbackValidation : "0x9a9C8bc5d0A3F090aa4A049433DEa0180026B9dF"
+
+    # uniswap mocks
+    MFactory : "0xF20f7fbbd9653f18b2A1d6B66D2883455cA3A2b6"
+    MFactoryII : "0xe395CE5CE1a0e43AcedF20294Ed563b5C239C7Bf"
+    MNonfungiblePositionManager : "0xE61Ee890f1c5a22699Fa0510c4E888a36E251365"
+    MNonfungiblePositionManagerII : "0x4729AbA25414CA2add1928c9616afa7F3480b818"
+    MSwapRouter : "0x0383aA8cC6a0eBa7d14e26048ae621dee50E5d1e"
+    # my mocks/ test contracts
+    MliquidityMiner : "0xa2Bbcd99Bb90eA12e7731eD914B004D6615202C3"
+    MLiquidityStaker : "0x1D7DBf22DF6Ea5B7dBD037D120E685CDf5dDDBF2"
+    MSwapper : "0x820AdA3818edea18351389DbF01fe9639169d392"
+
+    #---------- TESTING
+    MyMath : "0xE9342dB79f0E733f4475C68d2B7A9801d3E5501F"
+
+# stole my MATIC: 0x17a31Ee68607e4764DaC88710dd64FFdC79FFfe9
+
+wallets:
+  GOOG_key  : ${PRIVATE_KEY_GOOGLE}
+  EXPLOR_key: ${PRIVATE_KEY_EXPLORER}
