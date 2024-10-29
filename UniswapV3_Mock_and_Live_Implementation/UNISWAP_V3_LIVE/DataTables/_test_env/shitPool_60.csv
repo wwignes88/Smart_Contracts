@@ -1,8 +1,0 @@
-tick,liquidityGross,liquidityNet,feeGrowthOut0,feeGrowthOut1,tickCumulativeOut,secsPerLiquidity,secsOut,initialized
-0,20000,10500,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0
-15300,15301,0,0,0,0,0,0,0
-30660,30662,0,0,0,0,0,0,0
-46020,46023,12000,0,0,0,0,0,0
-61380,61384,0,0,0,0,0,0,0
-76740,76745,5000,0,0,0,0,0,0
